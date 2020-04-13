@@ -1,0 +1,20 @@
+{
+    "name": "test/framework",
+    "description": "chonghuabai test framework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "baichonghua",
+            "email": "18211167516@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Leet\\": "leet/",
+            "Offer\\":"offer/"
+        }
+    }
+}
