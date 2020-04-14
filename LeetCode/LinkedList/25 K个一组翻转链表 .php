@@ -1,5 +1,5 @@
 <?php
-require('LinkedList.php');
+namespace Leet\LinkedList;
 class Solution {
 
     /**
@@ -22,6 +22,8 @@ class Solution {
 
 
 }
+
+require('LinkedList.php');
 
 $link = new MyLinkedList();
 

@@ -1,4 +1,6 @@
 <?php
+
+namespace Leet\LinkedList;
 class ListNode{
     public $val;
     public $next=null;
