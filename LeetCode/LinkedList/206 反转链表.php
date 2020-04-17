@@ -1,7 +1,9 @@
 <?php
 
 namespace Leet\LinkedList;
+require './vendor/autoload.php';
 
+use Leet\LinkedList\MyLinkedList;
 /**
  * @category 反转单链表 
  * @author baichonghua <18211167516@163.com>
@@ -70,7 +72,6 @@ class Solution{
     }
 }
 
-require_once('LinkedList.php');
 
 $link = new MyLinkedList();
 

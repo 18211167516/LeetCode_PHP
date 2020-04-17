@@ -1,5 +1,8 @@
 <?php
 namespace Leet\LinkedList;
+require './vendor/autoload.php';
+use Leet\LinkedList\MyLinkedList;
+use Leet\LinkedList\ListNode;
 class Solution {
 
     /**
@@ -12,18 +15,11 @@ class Solution {
         if($head==null || $k<2) return $head;
         $dumy = new ListNode(null);
         $dumy->next = $head;
-        
-        $end  = $dumy;
-        $end  = $dumy;
-        
+        return $dumy;
         
     }
 
-
-
 }
-
-require('LinkedList.php');
 
 $link = new MyLinkedList();
 
