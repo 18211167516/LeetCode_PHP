@@ -14,5 +14,11 @@
         "psr-4": {
             "Leet\\": "LeetCode/"
         }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }
