@@ -34,6 +34,8 @@ class Solution {
                 $R--;
                 continue;
             }
+
+            
             if($s[$L] != $s[$R]){
                 return false;break;
             }
