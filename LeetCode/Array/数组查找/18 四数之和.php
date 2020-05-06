@@ -29,21 +29,18 @@ class Solution {
         //排序
         sort($nums);
         for($i=0;$i<=$len-4;$i++){
-            if($nums[$i]>$target){
-                break;//最低位大于0 直接跳出循环
-            }
             if($i>0 && $nums[$i] == $nums[$i-1]){
                 continue;//去除重复值
             }
             for($j=$i+1;$j<=$len-3;$j++){
-                if($j>1 && $nums[$j] == $nums[$j-1]){
+                if($j-$i>1 && $nums[$j] == $nums[$j-1]){
                     continue;//去除重复值
                 }
                 $L = $j+1;
                 $R = $len-1;
                 while($L<$R){
                     $sum = $nums[$i]+$nums[$j]+$nums[$L]+$nums[$R];
-                    if($sum == 0){
+                    if($sum == $target){
                         $res[] = [$nums[$i],$nums[$j],$nums[$L],$nums[$R]];
                         while($L<$R && $nums[$L] == $nums[$L+1]){
                             $L++;
@@ -53,9 +50,9 @@ class Solution {
                         }
                         $L++;
                         $R--;
-                    }elseif($sum>0){
+                    }elseif($sum>$target){
                         $R--;
-                    }elseif($sum<0){
+                    }elseif($sum<$target){
                         $L++;
                     }
                 } 
@@ -67,6 +64,6 @@ class Solution {
 
 $a  = new Solution();
 
-$nums = [1,0,-1,0,-2,2];
+$nums = [1,-2,-5,-4,-3,3,3,5];
 
-print_r($a->fourSum($nums));
+print_r($a->fourSum($nums,-11));
